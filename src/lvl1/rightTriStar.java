@@ -2,7 +2,8 @@ package lvl1;
 
 import java.util.Scanner;
 
-public class righTriStar {
+// 직사각형 별찍기
+public class rightTriStar {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
 
