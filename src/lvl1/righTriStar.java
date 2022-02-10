@@ -15,7 +15,5 @@ public class righTriStar {
             }
             System.out.println();
         }
-
-
     }
 }
