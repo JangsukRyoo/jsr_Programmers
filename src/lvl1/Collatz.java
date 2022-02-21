@@ -5,14 +5,17 @@ import java.util.Scanner;
 public class Collatz {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
+        long num = sc.nextLong();
+
         int answer = 0;
 
         while (num != 1) {
+
             if (num % 2 == 0) {
-               num /= 2;
+                num /= 2;
             } else {
-                num = (num * 3) + 1;
+                num *= 3;
+                num += 1;
             }
 
             answer++;
@@ -21,6 +24,7 @@ public class Collatz {
                 break;
             }
         }
+
         System.out.println(answer);
     }
 }
