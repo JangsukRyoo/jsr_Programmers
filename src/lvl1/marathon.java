@@ -30,4 +30,5 @@ public class marathon {
             }
         System.out.println(answer);
     }
+    // getOrDefault = 중복된 key 값을 체크 하느것
 }

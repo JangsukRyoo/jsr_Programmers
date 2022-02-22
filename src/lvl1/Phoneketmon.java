@@ -16,4 +16,6 @@ public class Phoneketmon {
         }
         return pocket.size();
     }
+
+    // HashSet은 중복을 허용하지 않으므로, 고를수 있는 숫자의 만큼 렌덤으로 넣을수있다.
 }
