@@ -6,9 +6,9 @@ import java.util.*;
 public class Failure {
     public static void main (String args[]){
         int [] answer = {};
-        int n = 5;
-        int [] stages = {2,1,2,6,2,4,3,3};
-
+        int n = 4;
+        //int [] stages = {2,1,2,6,2,4,3,3};
+        int [] stages = {4,4,4,4,4};
         answer = solution(n,stages);
 
     }
@@ -17,6 +17,7 @@ public class Failure {
         int[] answer = new int[N];
         int length = stages.length;
         int ct = 0;
+        int rest = 1;
 
         //스테이지 정렬
         Arrays.sort(stages);
@@ -54,14 +55,25 @@ public class Failure {
         }
 
         // 오름차수 정렬
-        List<Map.Entry<Integer,Double>> failEntryList = new LinkedList<>(failure.entrySet());
-        failEntryList.sort(Map.Entry.comparingByValue());
+//        List<Map.Entry<Integer,Double>> failEntryList = new LinkedList<>(failure.entrySet());
+//        failEntryList.sort(Map.Entry.comparingByValue());
+//        for(Map.Entry<Integer,Double> fEntry: failEntryList){
+//            answer[ct] = fEntry.getKey();
+//            ct ++;
+//        }
+        // 내림차수 정렬
+        List<Integer> keySet = new ArrayList<Integer>(failure.keySet());
 
-        for(Map.Entry<Integer,Double> fEntry: failEntryList){
-            answer[ct] = fEntry.getKey();
-            ct ++;
+        Collections.sort(keySet, (o1,o2) -> (failure.get(o2).compareTo(failure.get(o1))));
+
+        for(int i = 0; i < N; i++){
+            if(i < keySet.size()){
+                 answer[i] = keySet.get(i);
+            }else{
+                answer[i] =rest;
+                rest ++;
+            }
         }
-
         return answer;
     }
 }
