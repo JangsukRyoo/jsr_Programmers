@@ -42,6 +42,7 @@ public class Failure {
         //실패율 계산
         for(Map.Entry<Integer,Integer> entry : entryList){
             double fail = 0;
+            
             double chk = ((double)entry.getValue()/(double)length);
             if(chk == 1){
                 fail = 0;
@@ -53,14 +54,7 @@ public class Failure {
             System.out.println(fail);
             length -= entry.getValue();
         }
-
-        // 오름차수 정렬
-//        List<Map.Entry<Integer,Double>> failEntryList = new LinkedList<>(failure.entrySet());
-//        failEntryList.sort(Map.Entry.comparingByValue());
-//        for(Map.Entry<Integer,Double> fEntry: failEntryList){
-//            answer[ct] = fEntry.getKey();
-//            ct ++;
-//        }
+        
         // 내림차수 정렬
         List<Integer> keySet = new ArrayList<Integer>(failure.keySet());
 
@@ -76,4 +70,5 @@ public class Failure {
         }
         return answer;
     }
+
 }
