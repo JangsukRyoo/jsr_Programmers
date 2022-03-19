@@ -11,7 +11,7 @@ public class KeyPad {
         String answer = "";
         HashMap<String, Integer> thumbLoc = new HashMap<>();
         thumbLoc.put("R",12);
-        thumbLoc.put("L",11);
+        thumbLoc.put("L",10);
 
         if(hand.equals("right")){
             thumb = "R";
@@ -31,8 +31,6 @@ public class KeyPad {
             }
 
             if(num == 2 || num == 5 || num == 8|| num == 0){
-                int lLoc = thumbLoc.get("L");
-                int rLoc = thumbLoc.get("R");
                 int lDis = disCal(thumbLoc.get("L"),num);
                 int rDis = disCal(thumbLoc.get("R"),num);
 
