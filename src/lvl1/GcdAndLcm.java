@@ -12,7 +12,6 @@ public class GcdAndLcm {
 
         System.out.println(answer[0]);
         System.out.println(answer[1]);
-
     }
     public static int gcd(int a, int b){
         if(b ==0){

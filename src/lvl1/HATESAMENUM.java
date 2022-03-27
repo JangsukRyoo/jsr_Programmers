@@ -17,7 +17,6 @@ public class HATESAMENUM {
                 n = num;
             }
         }
-
         int[] answer = new int[tmpArr.size()];
         for(int i = 0; i<answer.length; i++){
             answer[i] = tmpArr.get(i).intValue();
