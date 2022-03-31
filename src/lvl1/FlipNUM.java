@@ -8,9 +8,7 @@ public class FlipNUM {
         int n = 118372;
         String s = String.valueOf(n);
         long answer =0;
-
         String[] numArr = s.split("");
-
         Arrays.sort(numArr);
         Collections.reverse(Arrays.asList(numArr));
         answer = Long.parseLong(String.join("",numArr));
