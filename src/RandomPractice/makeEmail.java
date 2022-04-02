@@ -48,6 +48,7 @@ public class makeEmail {
             System.out.println(name.length-1);
             index ++;
         }
+
         System.out.println(S);
         System.out.println(result);
     }
