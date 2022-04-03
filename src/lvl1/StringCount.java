@@ -1,5 +1,7 @@
 package lvl1;
 
+import java.util.Locale;
+
 import static org.apache.groovy.parser.antlr4.util.StringUtils.countChar;
 
 public class StringCount {
@@ -10,8 +12,7 @@ public class StringCount {
 //        if(countChar(s,'p')+countChar(s,'P') != countChar(s,'y')+countChar(s,'Y')){
 //            answer =false;
 //        }
-        s = s.replace('p','P');
-        s = s.replace("y","Y");
+        s = s.toUpperCase(Locale.ROOT);
         int num = 0;
 
         for(int i =0; i<s.length(); i++){
@@ -24,6 +25,10 @@ public class StringCount {
         if(num != 0){
             answer = false;
         }
+
+        //람다식 풀이
+        answer =s.chars().filter( e -> 'P'== e).count() == s.chars().filter( e -> 'Y'== e).count();
+
         System.out.println(answer);
     }
 }
