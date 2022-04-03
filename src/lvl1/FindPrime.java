@@ -1,5 +1,6 @@
 package lvl1;
 
+//소수 만들기
 public class FindPrime {
     public static void main(String args[]){
     int[] num = {1,2,3,4};
