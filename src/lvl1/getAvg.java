@@ -11,7 +11,6 @@ public class getAvg {
             sum += arr[i];
         }
         avg = sum / arr.length;
-
         System.out.println(avg);
     }
 }

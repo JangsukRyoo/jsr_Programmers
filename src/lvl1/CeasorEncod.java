@@ -10,12 +10,10 @@ public class CeasorEncod {
             for(int i = 0; i < a.length; i++) {
                 char ch = a[i];
                 int num = (int)a[i];
-
                 //대문자
                 if(ch == ' '){
                  result += ch;
                  continue;
-
                 } else if(num < 97){
                     if((num + n) > 90 ){
                         int add = (num + n - 91);
@@ -24,7 +22,6 @@ public class CeasorEncod {
                     }else{
                         result +=(char) (num +n);
                     }
-
                 //소문자
                 }else{
                     if((num +n)>122) {
@@ -37,8 +34,6 @@ public class CeasorEncod {
                     }
                 }
             }
-
-
         System.out.println(result);
     }
 }
