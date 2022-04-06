@@ -38,6 +38,5 @@ public class PEclothe {
 
         result = n - (lost.length - ctStud.size());
         System.out.println(result);
-
     }
 }

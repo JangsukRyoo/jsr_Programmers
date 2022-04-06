@@ -14,11 +14,9 @@ public class findNum {
                     break;
                 }
             }
-
             if(fl == true)
                 answer ++;
         }
-
         System.out.println(answer);
     }
 }

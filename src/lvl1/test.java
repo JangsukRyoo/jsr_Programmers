@@ -20,8 +20,6 @@ public class test {
                 }
             ct ++;
         }
-
         System.out.println(result);
-
     }
 }

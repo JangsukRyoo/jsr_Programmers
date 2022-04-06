@@ -18,11 +18,8 @@ public class twothousand {
         for(int i = 0; i<a-1; i++){
             total += date[i];
         }
-
         total += (b-1);
-
         answer = day[total%7];
-
         System.out.println(answer);
     }
 }

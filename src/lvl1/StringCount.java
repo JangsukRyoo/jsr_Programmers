@@ -28,7 +28,6 @@ public class StringCount {
 
         //람다식 풀이
         answer =s.chars().filter( e -> 'P'== e).count() == s.chars().filter( e -> 'Y'== e).count();
-
         System.out.println(answer);
     }
 }
