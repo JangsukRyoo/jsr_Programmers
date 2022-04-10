@@ -36,7 +36,6 @@ public class Nevigation {
         System.out.println(list);
     }
 
-
     static String setdir(String curDir, String nDir){
         String direction ="";
         switch(curDir){
