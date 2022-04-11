@@ -14,7 +14,9 @@ public class DFSANDBFS {
             if(sum == tget) answer ++;
              return;
         }
-        dfs(numbers, tget, i+1, sum+numbers[i]);
-        dfs(numbers, tget, i+1, sum-numbers[i]);
+        if(i < numbers.length) {
+            dfs(numbers, tget, i + 1, sum + numbers[i]);
+            dfs(numbers, tget, i + 1, sum - numbers[i]);
+        }
     }
 }
