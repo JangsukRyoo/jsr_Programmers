@@ -52,8 +52,6 @@ import java.util.*;
              }
          System.out.println(answer);
 
-
-
      }
 
          static class Coins implements Comparable<Coins> {
@@ -76,5 +74,4 @@ import java.util.*;
                      return -1;
              }
          }
-
 }

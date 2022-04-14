@@ -43,7 +43,6 @@ public class changeFILENAME {
                     tpCt ++;
                 }
             }
-
           rs = check(bList, aList);
         }while(!rs);
         System.out.println(tpCt);
