@@ -32,7 +32,6 @@ public class makeEmail {
                 iniName += sptName[sptName.length - 1];
             }
             iniName = " <"+iniName.toLowerCase();
-
             nameMap.put(iniName, nameMap.getOrDefault(iniName,-1)+1);
 
             if(index == name.length-1){comma ="";}
