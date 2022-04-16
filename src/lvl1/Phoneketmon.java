@@ -6,7 +6,6 @@ public class Phoneketmon {
 
     public static int result(String[] args) {
         int [] nums = {3,1,2,3};
-
         int canSelect = nums.length/2;
         HashSet<Integer> pocket = new HashSet<>();
         for(int i=0; i<nums.length; i++){

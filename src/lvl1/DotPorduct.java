@@ -10,7 +10,5 @@ public class DotPorduct {
             answer += a[i]*b[i];
         }
         System.out.println(answer);
-
-
     }
 }
