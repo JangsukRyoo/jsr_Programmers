@@ -1,48 +1,53 @@
 package lvl2;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class FindPrime2 {
-    static int answer =0;
-    static Boolean[] check = new Boolean[10];
-    static ArrayList<Integer> arr = new ArrayList<>();
+   static TreeSet<Integer> set = new TreeSet<>();
 
     public static void main(String args[]) {
-        String numbers = "17";
-        for(int i = 0; i<numbers.length(); i++) {
-            dfs(numbers, "", i + 1);
+        String numbers = "011";
+        int answer= 0;
+        String[] str = new String[numbers.length()];
+        boolean[] check = new boolean[numbers.length()];
+
+        for(int i =0; i<numbers.length(); i++){
+            str[i] = Character.toString(numbers.charAt(i));
         }
-        for(int i =0; i<arr.size(); i++){
-            findPrime(arr.get(i));
+        for(int i = 0; i<numbers.length(); i++){
+            dfs(str, check, "", i+1,0);
         }
+        answer = set == null ? 0 : set.size();
         System.out.println(answer);
     }
-    public static void dfs(String str, String tmp, int m){
-        if(tmp.length() == m){
-            int num = Integer.parseInt(tmp);
-            if(!arr.contains(num)) {
-                arr.add(num);
-                return;
-            }else {
-                for (int i = 0; i < str.length(); i++) {
-                    if (!check[i]) {
-                        check[i] = true;
-                        tmp += str.charAt(i);
-                        dfs(str, tmp, m);
-                        check[i] = false;
-                        tmp = tmp.substring(0, tmp.length() - 1);
-                    }
-                }
+    public static void dfs(String[] arr, boolean[] check, String str, int r, int depth){
+        //
+        if(depth == r){
+            int n = Integer.parseInt(str);
+            if(findPrime(n) && !set.contains(n)){
+                set.add(n);
+            }
+            return;
+        }
+
+        for(int i=0;i<arr.length;i++){
+            if(!check[i]){
+                check[i] = true;
+                str += arr[i];
+                dfs(arr, check, str, r, depth+1);
+                str = str.substring(0, str.length() - 1);
+                check[i] = false;
+
             }
         }
     }
 
-    public static void findPrime(int n){
-        if(n==1 || n == 0)return;
+    public static boolean findPrime(int n){
+        if(n==1 || n == 0)return false;
         for(int i=2; i<Math.sqrt(n); i++){
-            if(n%i ==0) return;
+            if(n%i ==0) return false;
         }
-        answer ++;
+        return true;
     }
 
 }
