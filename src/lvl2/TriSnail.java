@@ -34,6 +34,7 @@ public class TriSnail {
                 answer[k++] = arr[i][j];
             }
         }
+
         System.out.println(answer);
     }
 }
