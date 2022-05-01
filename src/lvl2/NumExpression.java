@@ -5,23 +5,21 @@ public class NumExpression {
 
         int num = 15;
         int answer = 0;
-        int sum = 0;
+
         for(int i = 1; i<=num; i++){
-                sum = i;
-                if(sum == num){
-                    answer++;
-                }
-            for(int n = 1; n<num-i; n++) {
+            int n = i;
+            int sum = 0;
+            while(true) {
                 sum += n;
                 if (sum == num) {
                     answer++;
-                    sum = 0;
-                } else if (sum >num) {
+                    break;
+                } else if (sum > num) {
                     break;
                 }
+                n++;
             }
         }
-
         System.out.println(answer);
     }
 }
