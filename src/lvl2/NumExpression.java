@@ -9,12 +9,12 @@ public class NumExpression {
         for(int i = 1; i<=num; i++){
                 sum = i;
                 if(sum == num){
-                    solution++;
+                    answer++;
                 }
             for(int n = 1; n<num-i; n++) {
                 sum += n;
                 if (sum == num) {
-                    solution++;
+                    answer++;
                     sum = 0;
                 } else if (sum >num) {
                     break;
@@ -22,6 +22,6 @@ public class NumExpression {
             }
         }
 
-        System.out.println(solution);
+        System.out.println(answer);
     }
 }
