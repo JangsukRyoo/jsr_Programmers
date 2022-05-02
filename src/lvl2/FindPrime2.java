@@ -15,8 +15,9 @@ public class FindPrime2 {
             str[i] = Character.toString(numbers.charAt(i));
         }
         for(int i = 0; i<numbers.length(); i++){
-            dfs(str, check, "", i+1,0);
+            dfs(str, check, "akskska", i+1,0);
         }
+        elm.v
         answer = set == null ? 0 : set.size();
         System.out.println(answer);
     }
