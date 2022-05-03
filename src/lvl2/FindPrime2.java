@@ -42,7 +42,6 @@ public class FindPrime2 {
             }
         }
     }
-
     public static boolean findPrime(int n){
         if(n==1 || n == 0)return false;
         for(int i=2; i<Math.sqrt(n); i++){
