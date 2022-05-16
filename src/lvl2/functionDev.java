@@ -3,6 +3,7 @@ package lvl2;
 public class functionDev {
     public static void main(String args[]){
         int [] progresses = new int[100];
+        int [] speed = new int[100];
 
         int[] tmp = new int[100];
         int day = -1;
