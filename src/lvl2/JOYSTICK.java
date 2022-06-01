@@ -3,7 +3,7 @@ import java.util.*;
 
 public class JOYSTICK {
     public static void main(String args[]){
-        String name = "";
+        String name = "JAN";
         int answer = 0;
         int len = name.length();
 
@@ -18,7 +18,7 @@ public class JOYSTICK {
                 answer += name.charAt(i) - 'A';
             }
             int conA = i+1;
-            //다음 글자부터 연속된 A가 있는 경우 되돌아가는게 빠른지 확인
+            //되돌아가는것이 빠른지 확인
             while(conA < len && name.charAt(conA) == 'A'){
                 conA++;
             }
@@ -26,6 +26,7 @@ public class JOYSTICK {
 
         }
         answer+=move;
+
         System.out.println(answer);
     }
 }
