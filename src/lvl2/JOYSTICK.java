@@ -8,6 +8,7 @@ public class JOYSTICK {
         int len = name.length();
 
         int move = len-1;
+
         for(int i=0; i<len; i++){
             //상하 이동
             if(name.charAt(i)> 'N'){
@@ -26,7 +27,6 @@ public class JOYSTICK {
 
         }
         answer+=move;
-
         System.out.println(answer);
     }
 }

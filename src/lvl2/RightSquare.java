@@ -9,5 +9,6 @@ public class RightSquare {
             answer += h*i/w;
         }
         System.out.println(answer*2);
+
     }
 }
