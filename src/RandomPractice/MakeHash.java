@@ -7,7 +7,5 @@ public class MakeHash {
         int num =  34;
         int answer = num * 23;
         System.out.println(answer);
-
-
     }
 }
