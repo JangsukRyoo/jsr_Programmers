@@ -13,9 +13,7 @@ public class makeEmail {
         String result = "";
         String comma = ", ";
         String email = "@" + c.toLowerCase() +".com>";
-
         int index = 0;
-
         for(String a : name){
             String[] sptName = a.split(" ");
             String iniName ="";
@@ -41,9 +39,7 @@ public class makeEmail {
             }else {
                 result +=a +iniName+nameMap.getOrDefault(iniName,0)+email+comma;
             }
-
             System.out.println(index);
-
             System.out.println(name.length-1);
             index ++;
         }
