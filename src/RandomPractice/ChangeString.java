@@ -29,7 +29,6 @@ public class ChangeString {
                 answer = answer.replaceAll(key.toLowerCase(),"");
             }
         }
-        System.out.println(tmp);
         System.out.println(setCall);
         System.out.println(answer);;
     }
