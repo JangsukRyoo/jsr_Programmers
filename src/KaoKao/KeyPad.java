@@ -12,13 +12,11 @@ public class KeyPad {
         HashMap<String, Integer> thumbLoc = new HashMap<>();
         thumbLoc.put("R",12);
         thumbLoc.put("L",10);
-
         if(hand.equals("right")){
             thumb = "R";
         }else{
             thumb = "L";
         }
-
         for(int i = 0; i <number.length; i++){
             int num = number[i];
             if(num == 1 || num == 4 || num == 7){
@@ -47,7 +45,6 @@ public class KeyPad {
             }
         }
         System.out.println(answer);
-
     }
 
     public static int disCal (int location , int num){
@@ -55,7 +52,6 @@ public class KeyPad {
 
         location =(location == 0) ? 11 : location;
         num = (num == 0) ? 11 : num;
-
         int x = (location - 1) / 3;
         int y = (location - 1) % 3;
         int numX = num / 3;
