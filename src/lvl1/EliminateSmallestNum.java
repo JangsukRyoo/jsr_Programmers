@@ -10,7 +10,6 @@ public class EliminateSmallestNum {
     static int[] solution(int[] arr) {
         int[] ans = {};
         int ansct =0; // 작은수가 중간에 있을 경우 런타임 에러가남 순서대로 증가하지 않음
-
         // -1 처리
         if (arr.length <= 1) {
             return new int[]{-1};
