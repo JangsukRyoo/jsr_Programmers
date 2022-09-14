@@ -24,7 +24,6 @@ public class OpenChat {
                     break;
             }
         }
-
             String str = sb.toString();
             String[] answer = str.split("-");
 
