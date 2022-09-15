@@ -56,7 +56,6 @@ public class KeyPad {
         int y = (location - 1) % 3;
         int numX = num / 3;
         int numY= 1;
-
         return Math.abs(x-numX) + Math.abs(y-numY);
     }
 
